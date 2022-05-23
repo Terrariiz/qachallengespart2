@@ -1,3 +1,5 @@
+#resources imports center
+
 ***Settings***
 Library     Selenium2Library    run_on_failure=Nothing
 Library     Collections

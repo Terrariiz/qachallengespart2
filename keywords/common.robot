@@ -80,7 +80,7 @@ Click Apply Promo Code
     Wait Until Keyword Succeeds    20s    2s      Wait Until Element Is Visible    ${btn_applypromocode}
     Click Button    ${btn_applypromocode}
 
-Validate My Shopping Bag
+Validate My Shopping Bag            #Validate all element in Shopping Bag
     Wait Until Keyword Succeeds    20s    2s      Wait Until Element Is Visible    ${txt_bagheader}
     Element Text Should Be    ${txt_bagheader}    ${my_shopping_bag}
     Wait Until Keyword Succeeds    20s    2s      Wait Until Element Is Visible    ${btn_closebag}

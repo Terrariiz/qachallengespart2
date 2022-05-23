@@ -1,7 +1,7 @@
 ***Settings***
 Resource    ../resources/imports.robot
 
-# robot --i CASE001 testcase.robot
+# robot --i CASEXXX testcase.robot
 ***Test Cases***
 
 [CASE001] Add Product to Cart and Check Cart
