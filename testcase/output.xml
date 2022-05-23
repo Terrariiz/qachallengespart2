@@ -1,0 +1,1433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.6.8 on win32)" generated="20220524 00:45:12.956" rpa="false" schemaversion="2">
+<suite id="s1" name="Testcase" source="C:\Users\Acer\Desktop\WORKPLACE\qachallenges\challenges\challenge-qa-automation\part2\testcase\testcase.robot">
+<test id="s1-t1" name="[CASE001] Add Product to Cart and Check Cart">
+<kw name="Open Pomelo Website" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220524 00:45:13.331" level="INFO">Opening browser 'chrome' to base url 'https://www.pomelofashion.com/th/en/'.</msg>
+<status status="PASS" starttime="20220524 00:45:13.331" endtime="20220524 00:45:21.455"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220524 00:45:21.456" endtime="20220524 00:45:21.756"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:13.330" endtime="20220524 00:45:21.757"/>
+</kw>
+<kw name="Click Product Category" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_category})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:45:21.763" endtime="20220524 00:45:21.817"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:21.762" endtime="20220524 00:45:21.817"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:45:21.817" level="INFO">Clicking element '(//div[@class='editorial-masonry-item-container'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:45:21.817" endtime="20220524 00:45:21.959"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:21.761" endtime="20220524 00:45:21.960"/>
+</kw>
+<kw name="Click Product" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_product})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220524 00:45:27.095" level="FAIL">Element '(//div[@class='jsx-2514490977 product-item hoverable'])[1]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220524 00:45:21.964" endtime="20220524 00:45:27.095"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:45:29.099" endtime="20220524 00:45:29.214"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:21.963" endtime="20220524 00:45:29.215"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:45:29.216" level="INFO">Clicking element '(//div[@class='jsx-2514490977 product-item hoverable'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:45:29.215" endtime="20220524 00:45:29.349"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:21.962" endtime="20220524 00:45:29.349"/>
+</kw>
+<kw name="Click Add to Bag Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_addtobag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_addtobag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:45:29.351" endtime="20220524 00:45:33.325"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:29.350" endtime="20220524 00:45:33.326"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_addtobag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:45:33.328" level="INFO">Clicking element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri pdp__add-to-bag-cta']'.</msg>
+<status status="PASS" starttime="20220524 00:45:33.327" endtime="20220524 00:45:33.547"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:29.350" endtime="20220524 00:45:33.549"/>
+</kw>
+<kw name="Click Close Notice Item Added to Bag" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_closebagnotice}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_closebagnotice}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220524 00:45:38.667" level="FAIL">Element '//span[@data-cy='close_cart_notice']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220524 00:45:33.554" endtime="20220524 00:45:38.668"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_closebagnotice}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:45:40.682" endtime="20220524 00:45:41.865"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:33.553" endtime="20220524 00:45:41.865"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_closebagnotice}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:45:41.866" level="INFO">Clicking element '//span[@data-cy='close_cart_notice']'.</msg>
+<status status="PASS" starttime="20220524 00:45:41.865" endtime="20220524 00:45:41.980"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:33.552" endtime="20220524 00:45:41.981"/>
+</kw>
+<kw name="Click Shopping Bag Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_bag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_bag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:45:41.982" endtime="20220524 00:45:42.031"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:41.982" endtime="20220524 00:45:42.031"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_bag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:45:42.032" level="INFO">Clicking element '//div[@class='jsx-740306513 pml-badge']'.</msg>
+<status status="PASS" starttime="20220524 00:45:42.031" endtime="20220524 00:45:42.156"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:41.981" endtime="20220524 00:45:42.157"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220524 00:45:42.157" endtime="20220524 00:45:44.886"/>
+</kw>
+<tag>CASE001</tag>
+<status status="PASS" starttime="20220524 00:45:13.329" endtime="20220524 00:45:44.887"/>
+</test>
+<test id="s1-t2" name="[CASE002] Adjust Quantity of Product items or items">
+<kw name="Open Pomelo Website" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220524 00:45:44.898" level="INFO">Opening browser 'chrome' to base url 'https://www.pomelofashion.com/th/en/'.</msg>
+<status status="PASS" starttime="20220524 00:45:44.897" endtime="20220524 00:45:51.438"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220524 00:45:51.440" endtime="20220524 00:45:51.757"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:44.893" endtime="20220524 00:45:51.757"/>
+</kw>
+<kw name="Click Product Category" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_category})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:45:51.760" endtime="20220524 00:45:51.819"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:51.759" endtime="20220524 00:45:51.819"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:45:51.820" level="INFO">Clicking element '(//div[@class='editorial-masonry-item-container'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:45:51.819" endtime="20220524 00:45:51.932"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:51.758" endtime="20220524 00:45:51.933"/>
+</kw>
+<kw name="Add Product to Bag" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_product})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:45:51.938" endtime="20220524 00:45:55.562"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:51.937" endtime="20220524 00:45:55.562"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220524 00:45:55.563" level="INFO">Executing JavaScript:
+window.scrollTo(0, 500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220524 00:45:55.562" endtime="20220524 00:45:55.578"/>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220524 00:45:55.579" level="INFO">Simulating Mouse Over on element '(//div[@class='jsx-2514490977 product-item hoverable'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:45:55.578" endtime="20220524 00:45:55.991"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:45:55.992" endtime="20220524 00:45:56.090"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:55.991" endtime="20220524 00:45:56.090"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:45:56.092" level="INFO">Clicking element '(//div[@class='product-hover-interactions__add-to-bag'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:45:56.090" endtime="20220524 00:45:56.325"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:51.935" endtime="20220524 00:45:56.326"/>
+</kw>
+<kw name="Click View My Shopping Bag Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_viewbag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220524 00:46:01.353" level="FAIL">Element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri cart-notice__view-bag__cta']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220524 00:45:56.331" endtime="20220524 00:46:01.353"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:03.365" endtime="20220524 00:46:03.415"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:56.331" endtime="20220524 00:46:03.415"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:03.415" level="INFO">Clicking element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri cart-notice__view-bag__cta']'.</msg>
+<status status="PASS" starttime="20220524 00:46:03.415" endtime="20220524 00:46:03.601"/>
+</kw>
+<status status="PASS" starttime="20220524 00:45:56.330" endtime="20220524 00:46:03.602"/>
+</kw>
+<kw name="Adjust Product Quantity" library="common">
+<arg>3</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ddl_productquantity}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ddl_productquantity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:03.603" endtime="20220524 00:46:03.920"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:03.603" endtime="20220524 00:46:03.920"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ddl_productquantity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:03.920" level="INFO">Clicking element '//div[@class='cart-item-info__quantity']/div/div/div[@class='jsx-2192573192 body1 pml-dropdown__container pml-dropdown__float cart-item-info__select']'.</msg>
+<status status="PASS" starttime="20220524 00:46:03.920" endtime="20220524 00:46:04.022"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//option[@value='${num}']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//option[@value='${num}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:04.023" endtime="20220524 00:46:04.055"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:04.022" endtime="20220524 00:46:04.055"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[@value='${num}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:04.056" level="INFO">Clicking element '//option[@value='3']'.</msg>
+<status status="PASS" starttime="20220524 00:46:04.055" endtime="20220524 00:46:04.143"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:03.602" endtime="20220524 00:46:04.143"/>
+</kw>
+<kw name="Adjust Product Quantity" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ddl_productquantity}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ddl_productquantity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:04.146" endtime="20220524 00:46:06.154"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:04.145" endtime="20220524 00:46:06.154"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ddl_productquantity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:06.155" level="INFO">Clicking element '//div[@class='cart-item-info__quantity']/div/div/div[@class='jsx-2192573192 body1 pml-dropdown__container pml-dropdown__float cart-item-info__select']'.</msg>
+<status status="PASS" starttime="20220524 00:46:06.154" endtime="20220524 00:46:06.254"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//option[@value='${num}']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//option[@value='${num}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:06.254" endtime="20220524 00:46:06.304"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:06.254" endtime="20220524 00:46:06.304"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[@value='${num}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:06.305" level="INFO">Clicking element '//option[@value='1']'.</msg>
+<status status="PASS" starttime="20220524 00:46:06.304" endtime="20220524 00:46:06.411"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:04.144" endtime="20220524 00:46:06.412"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220524 00:46:06.413" endtime="20220524 00:46:09.078"/>
+</kw>
+<tag>CASE002</tag>
+<status status="PASS" starttime="20220524 00:45:44.890" endtime="20220524 00:46:09.079"/>
+</test>
+<test id="s1-t3" name="[CASE003] Adjust Size of Product items or items">
+<kw name="Open Pomelo Website" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220524 00:46:09.082" level="INFO">Opening browser 'chrome' to base url 'https://www.pomelofashion.com/th/en/'.</msg>
+<status status="PASS" starttime="20220524 00:46:09.082" endtime="20220524 00:46:19.844"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220524 00:46:19.844" endtime="20220524 00:46:20.192"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:09.082" endtime="20220524 00:46:20.192"/>
+</kw>
+<kw name="Click Product Category" library="common">
+<arg>3</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_category})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:20.196" endtime="20220524 00:46:20.242"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:20.195" endtime="20220524 00:46:20.242"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:20.243" level="INFO">Clicking element '(//div[@class='editorial-masonry-item-container'])[3]'.</msg>
+<status status="PASS" starttime="20220524 00:46:20.242" endtime="20220524 00:46:20.404"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:20.194" endtime="20220524 00:46:20.404"/>
+</kw>
+<kw name="Click Product" library="common">
+<arg>2</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_product})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220524 00:46:25.574" level="FAIL">Element '(//div[@class='jsx-2514490977 product-item hoverable'])[2]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220524 00:46:20.411" endtime="20220524 00:46:25.574"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:27.584" endtime="20220524 00:46:28.246"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:20.410" endtime="20220524 00:46:28.246"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:28.248" level="INFO">Clicking element '(//div[@class='jsx-2514490977 product-item hoverable'])[2]'.</msg>
+<status status="PASS" starttime="20220524 00:46:28.247" endtime="20220524 00:46:28.531"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:20.405" endtime="20220524 00:46:28.532"/>
+</kw>
+<kw name="Select Product Size" library="common">
+<arg>S</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//button[@class='button pdp__options-item' and (text()='${char}')]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//button[@class='button pdp__options-item' and (text()='${char}')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:28.538" endtime="20220524 00:46:30.917"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:28.536" endtime="20220524 00:46:30.917"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//button[@class='button pdp__options-item' and (text()='${char}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:30.918" level="INFO">Clicking element '//button[@class='button pdp__options-item' and (text()='S')]'.</msg>
+<status status="PASS" starttime="20220524 00:46:30.917" endtime="20220524 00:46:31.153"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:28.534" endtime="20220524 00:46:31.154"/>
+</kw>
+<kw name="Click Add to Bag Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_addtobag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_addtobag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:31.164" endtime="20220524 00:46:31.250"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:31.160" endtime="20220524 00:46:31.250"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_addtobag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:31.252" level="INFO">Clicking element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri pdp__add-to-bag-cta']'.</msg>
+<status status="PASS" starttime="20220524 00:46:31.250" endtime="20220524 00:46:31.499"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:31.157" endtime="20220524 00:46:31.499"/>
+</kw>
+<kw name="Click View My Shopping Bag Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_viewbag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20220524 00:46:36.665" level="FAIL">Element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri cart-notice__view-bag__cta']' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20220524 00:46:31.507" endtime="20220524 00:46:36.665"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:38.669" endtime="20220524 00:46:40.318"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:31.506" endtime="20220524 00:46:40.318"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:40.320" level="INFO">Clicking element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri cart-notice__view-bag__cta']'.</msg>
+<status status="PASS" starttime="20220524 00:46:40.318" endtime="20220524 00:46:40.586"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:31.505" endtime="20220524 00:46:40.586"/>
+</kw>
+<kw name="Adjust Product Size" library="common">
+<arg>M</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ddl_productsize}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ddl_productsize}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:40.588" endtime="20220524 00:46:40.921"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:40.587" endtime="20220524 00:46:40.921"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ddl_productsize}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:40.921" level="INFO">Clicking element '//div[@class='jsx-1747397204 size-quantity']/div/div/div[@class='jsx-2192573192 body1 pml-dropdown__container pml-dropdown__float cart-item-info__select']'.</msg>
+<status status="PASS" starttime="20220524 00:46:40.921" endtime="20220524 00:46:41.054"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//option[text()='${char}']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//option[text()='${char}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:41.055" endtime="20220524 00:46:41.146"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:41.054" endtime="20220524 00:46:41.147"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[text()='${char}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:41.148" level="INFO">Clicking element '//option[text()='M']'.</msg>
+<status status="PASS" starttime="20220524 00:46:41.147" endtime="20220524 00:46:41.272"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:40.587" endtime="20220524 00:46:41.273"/>
+</kw>
+<kw name="Adjust Product Size" library="common">
+<arg>L</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ddl_productsize}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ddl_productsize}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:41.276" endtime="20220524 00:46:42.756"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:41.276" endtime="20220524 00:46:42.756"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ddl_productsize}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:42.758" level="INFO">Clicking element '//div[@class='jsx-1747397204 size-quantity']/div/div/div[@class='jsx-2192573192 body1 pml-dropdown__container pml-dropdown__float cart-item-info__select']'.</msg>
+<status status="PASS" starttime="20220524 00:46:42.757" endtime="20220524 00:46:42.918"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//option[text()='${char}']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//option[text()='${char}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:42.919" endtime="20220524 00:46:43.001"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:42.918" endtime="20220524 00:46:43.001"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[text()='${char}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:43.002" level="INFO">Clicking element '//option[text()='L']'.</msg>
+<status status="PASS" starttime="20220524 00:46:43.001" endtime="20220524 00:46:43.273"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:41.275" endtime="20220524 00:46:43.273"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220524 00:46:43.274" endtime="20220524 00:46:45.720"/>
+</kw>
+<tag>CASE003</tag>
+<status status="PASS" starttime="20220524 00:46:09.081" endtime="20220524 00:46:45.733"/>
+</test>
+<test id="s1-t4" name="[CASE004] Adjust or Delete Product items or items">
+<kw name="Open Pomelo Website" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220524 00:46:45.745" level="INFO">Opening browser 'chrome' to base url 'https://www.pomelofashion.com/th/en/'.</msg>
+<status status="PASS" starttime="20220524 00:46:45.742" endtime="20220524 00:46:53.061"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220524 00:46:53.062" endtime="20220524 00:46:53.423"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:45.741" endtime="20220524 00:46:53.424"/>
+</kw>
+<kw name="Click Product Category" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_category})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:53.427" endtime="20220524 00:46:53.502"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:53.426" endtime="20220524 00:46:53.502"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:53.502" level="INFO">Clicking element '(//div[@class='editorial-masonry-item-container'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:46:53.502" endtime="20220524 00:46:53.717"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:53.424" endtime="20220524 00:46:53.717"/>
+</kw>
+<kw name="Add Product to Bag" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_product})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:53.724" endtime="20220524 00:46:57.276"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:53.723" endtime="20220524 00:46:57.277"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220524 00:46:57.280" level="INFO">Executing JavaScript:
+window.scrollTo(0, 500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220524 00:46:57.277" endtime="20220524 00:46:57.627"/>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220524 00:46:57.629" level="INFO">Simulating Mouse Over on element '(//div[@class='jsx-2514490977 product-item hoverable'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:46:57.628" endtime="20220524 00:46:58.137"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:58.141" endtime="20220524 00:46:58.577"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:58.139" endtime="20220524 00:46:58.577"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:46:58.579" level="INFO">Clicking element '(//div[@class='product-hover-interactions__add-to-bag'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:46:58.578" endtime="20220524 00:46:58.656"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:53.722" endtime="20220524 00:46:58.656"/>
+</kw>
+<kw name="Click View My Shopping Bag Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_viewbag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:46:58.659" endtime="20220524 00:47:02.644"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:58.658" endtime="20220524 00:47:02.644"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:02.645" level="INFO">Clicking element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri cart-notice__view-bag__cta']'.</msg>
+<status status="PASS" starttime="20220524 00:47:02.644" endtime="20220524 00:47:02.951"/>
+</kw>
+<status status="PASS" starttime="20220524 00:46:58.658" endtime="20220524 00:47:02.951"/>
+</kw>
+<kw name="Adjust Product Quantity" library="common">
+<arg>3</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ddl_productquantity}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ddl_productquantity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:02.952" endtime="20220524 00:47:03.188"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:02.952" endtime="20220524 00:47:03.189"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ddl_productquantity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:03.189" level="INFO">Clicking element '//div[@class='cart-item-info__quantity']/div/div/div[@class='jsx-2192573192 body1 pml-dropdown__container pml-dropdown__float cart-item-info__select']'.</msg>
+<status status="PASS" starttime="20220524 00:47:03.189" endtime="20220524 00:47:03.260"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//option[@value='${num}']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//option[@value='${num}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:03.261" endtime="20220524 00:47:03.292"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:03.261" endtime="20220524 00:47:03.292"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[@value='${num}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:03.292" level="INFO">Clicking element '//option[@value='3']'.</msg>
+<status status="PASS" starttime="20220524 00:47:03.292" endtime="20220524 00:47:03.371"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:02.951" endtime="20220524 00:47:03.371"/>
+</kw>
+<kw name="Adjust Product Quantity" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${ddl_productquantity}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ddl_productquantity}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:03.376" endtime="20220524 00:47:04.755"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:03.375" endtime="20220524 00:47:04.755"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ddl_productquantity}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:04.755" level="INFO">Clicking element '//div[@class='cart-item-info__quantity']/div/div/div[@class='jsx-2192573192 body1 pml-dropdown__container pml-dropdown__float cart-item-info__select']'.</msg>
+<status status="PASS" starttime="20220524 00:47:04.755" endtime="20220524 00:47:04.861"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//option[@value='${num}']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//option[@value='${num}']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:04.862" endtime="20220524 00:47:04.902"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:04.861" endtime="20220524 00:47:04.902"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>//option[@value='${num}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:04.903" level="INFO">Clicking element '//option[@value='1']'.</msg>
+<status status="PASS" starttime="20220524 00:47:04.902" endtime="20220524 00:47:04.989"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:03.373" endtime="20220524 00:47:04.990"/>
+</kw>
+<kw name="Remove Product from Shopping Bag" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_removeproduct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_removeproduct}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:04.992" endtime="20220524 00:47:06.140"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:04.991" endtime="20220524 00:47:06.140"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_removeproduct}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:06.141" level="INFO">Clicking element '//div[@class='jsx-1747397204 cart-remove']'.</msg>
+<status status="PASS" starttime="20220524 00:47:06.140" endtime="20220524 00:47:06.239"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:04.990" endtime="20220524 00:47:06.239"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220524 00:47:06.241" endtime="20220524 00:47:08.534"/>
+</kw>
+<tag>CASE004</tag>
+<status status="PASS" starttime="20220524 00:46:45.738" endtime="20220524 00:47:08.536"/>
+</test>
+<test id="s1-t5" name="[CASE005] Fill-in and Click Apply Promo Code">
+<kw name="Open Pomelo Website" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220524 00:47:08.559" level="INFO">Opening browser 'chrome' to base url 'https://www.pomelofashion.com/th/en/'.</msg>
+<status status="PASS" starttime="20220524 00:47:08.558" endtime="20220524 00:47:15.246"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220524 00:47:15.246" endtime="20220524 00:47:15.507"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:08.541" endtime="20220524 00:47:15.508"/>
+</kw>
+<kw name="Click Product Category" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_category})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:15.511" endtime="20220524 00:47:15.589"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:15.510" endtime="20220524 00:47:15.589"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:15.589" level="INFO">Clicking element '(//div[@class='editorial-masonry-item-container'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:47:15.589" endtime="20220524 00:47:15.688"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:15.509" endtime="20220524 00:47:15.689"/>
+</kw>
+<kw name="Add Product to Bag" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_product})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:15.697" endtime="20220524 00:47:18.495"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:15.693" endtime="20220524 00:47:18.495"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220524 00:47:18.496" level="INFO">Executing JavaScript:
+window.scrollTo(0, 500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220524 00:47:18.495" endtime="20220524 00:47:18.527"/>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220524 00:47:18.529" level="INFO">Simulating Mouse Over on element '(//div[@class='jsx-2514490977 product-item hoverable'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:47:18.528" endtime="20220524 00:47:18.913"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:18.913" endtime="20220524 00:47:19.060"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:18.913" endtime="20220524 00:47:19.060"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:19.061" level="INFO">Clicking element '(//div[@class='product-hover-interactions__add-to-bag'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:47:19.060" endtime="20220524 00:47:19.580"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:15.692" endtime="20220524 00:47:19.581"/>
+</kw>
+<kw name="Click View My Shopping Bag Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_viewbag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:19.586" endtime="20220524 00:47:21.913"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:19.584" endtime="20220524 00:47:21.913"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:21.914" level="INFO">Clicking element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri cart-notice__view-bag__cta']'.</msg>
+<status status="PASS" starttime="20220524 00:47:21.913" endtime="20220524 00:47:22.363"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:19.582" endtime="20220524 00:47:22.364"/>
+</kw>
+<kw name="Enter Promo Code" library="common">
+<arg>${promocode}</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_promocode}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_promocode}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:22.365" endtime="20220524 00:47:22.383"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:22.365" endtime="20220524 00:47:22.383"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${txt_promocode}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:22.384" level="INFO">Typing text 'PomeloMay30' into text field '//input[@class='jsx-1695452889 body1 pml-input__input']'.</msg>
+<status status="PASS" starttime="20220524 00:47:22.384" endtime="20220524 00:47:22.531"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:22.364" endtime="20220524 00:47:22.531"/>
+</kw>
+<kw name="Click Apply Promo Code" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_applypromocode}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_applypromocode}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:22.534" endtime="20220524 00:47:22.559"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:22.533" endtime="20220524 00:47:22.559"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_applypromocode}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:22.559" level="INFO">Clicking button '//button[@class='jsx-3342260016 pml-btn']'.</msg>
+<status status="PASS" starttime="20220524 00:47:22.559" endtime="20220524 00:47:22.638"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:22.532" endtime="20220524 00:47:22.638"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220524 00:47:22.639" endtime="20220524 00:47:24.965"/>
+</kw>
+<tag>CASE005</tag>
+<status status="PASS" starttime="20220524 00:47:08.539" endtime="20220524 00:47:24.966"/>
+</test>
+<test id="s1-t6" name="[CASE006] Validate Proceed and Checkout">
+<kw name="Open Pomelo Website" library="common">
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220524 00:47:24.969" level="INFO">Opening browser 'chrome' to base url 'https://www.pomelofashion.com/th/en/'.</msg>
+<status status="PASS" starttime="20220524 00:47:24.969" endtime="20220524 00:47:33.394"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220524 00:47:33.394" endtime="20220524 00:47:33.661"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:24.968" endtime="20220524 00:47:33.661"/>
+</kw>
+<kw name="Click Product Category" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_category})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:33.664" endtime="20220524 00:47:33.704"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:33.663" endtime="20220524 00:47:33.704"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${div_category})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:33.705" level="INFO">Clicking element '(//div[@class='editorial-masonry-item-container'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:47:33.704" endtime="20220524 00:47:33.787"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:33.662" endtime="20220524 00:47:33.789"/>
+</kw>
+<kw name="Add Product to Bag" library="common">
+<arg>1</arg>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${div_product})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:33.794" endtime="20220524 00:47:38.165"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:33.793" endtime="20220524 00:47:38.165"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0, 500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220524 00:47:38.167" level="INFO">Executing JavaScript:
+window.scrollTo(0, 500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220524 00:47:38.165" endtime="20220524 00:47:38.235"/>
+</kw>
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>(${div_product})[${num}]</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20220524 00:47:38.236" level="INFO">Simulating Mouse Over on element '(//div[@class='jsx-2514490977 product-item hoverable'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:47:38.235" endtime="20220524 00:47:38.619"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:38.620" endtime="20220524 00:47:38.716"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:38.619" endtime="20220524 00:47:38.716"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${btn_addtobaghover})[${num}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:38.717" level="INFO">Clicking element '(//div[@class='product-hover-interactions__add-to-bag'])[1]'.</msg>
+<status status="PASS" starttime="20220524 00:47:38.716" endtime="20220524 00:47:39.018"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:33.792" endtime="20220524 00:47:39.020"/>
+</kw>
+<kw name="Click View My Shopping Bag Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_viewbag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:39.023" endtime="20220524 00:47:43.852"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:39.022" endtime="20220524 00:47:43.852"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${btn_viewbag}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:43.853" level="INFO">Clicking element '//button[@class='jsx-3342260016 pml-btn pml-btn-pri cart-notice__view-bag__cta']'.</msg>
+<status status="PASS" starttime="20220524 00:47:43.852" endtime="20220524 00:47:44.054"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:39.021" endtime="20220524 00:47:44.054"/>
+</kw>
+<kw name="Validate My Shopping Bag" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_bagheader}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_bagheader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.055" endtime="20220524 00:47:44.089"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.055" endtime="20220524 00:47:44.089"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${txt_bagheader}</arg>
+<arg>${my_shopping_bag}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.092" level="INFO">Verifying element '//span[@class='jsx-3858356863 subtitle1 shopping-bag__title']' contains exact text 'My Shopping Bag'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.090" endtime="20220524 00:47:44.262"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_closebag}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_closebag}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.263" endtime="20220524 00:47:44.320"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.263" endtime="20220524 00:47:44.320"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_productname}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_productname}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.323" endtime="20220524 00:47:44.373"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.320" endtime="20220524 00:47:44.373"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_productprice}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_productprice}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.373" endtime="20220524 00:47:44.412"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.373" endtime="20220524 00:47:44.412"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//label[@for='Size']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//label[@for='Size']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.414" endtime="20220524 00:47:44.443"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.413" endtime="20220524 00:47:44.443"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>//label[@for='Size']</arg>
+<arg>${size}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.444" level="INFO">Verifying element '//label[@for='Size']' contains exact text 'Size'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.443" endtime="20220524 00:47:44.465"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>//label[@for='Quantity']</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>//label[@for='Quantity']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.465" endtime="20220524 00:47:44.485"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.465" endtime="20220524 00:47:44.485"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>//label[@for='Quantity']</arg>
+<arg>${quantity}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.485" level="INFO">Verifying element '//label[@for='Quantity']' contains exact text 'Quantity'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.485" endtime="20220524 00:47:44.501"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_justforyouheader}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_justforyouheader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.502" endtime="20220524 00:47:44.520"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.501" endtime="20220524 00:47:44.520"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${txt_justforyouheader}</arg>
+<arg>${just_for_you}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.521" level="INFO">Verifying element '//div[@class='jsx-2556654264 header-title subtitle1']' contains exact text 'Just For You'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.521" endtime="20220524 00:47:44.539"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_justforyousubtitle}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_justforyousubtitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.539" endtime="20220524 00:47:44.557"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.539" endtime="20220524 00:47:44.558"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${txt_justforyousubtitle}</arg>
+<arg>${discover_handpicked_styles_and_trends}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.558" level="INFO">Verifying element '//div[@class='jsx-2556654264 header-sub-title body2']' contains exact text 'Discover handpicked styles &amp; trends'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.558" endtime="20220524 00:47:44.576"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${div_justforyouproduct}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${div_justforyouproduct}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.576" endtime="20220524 00:47:44.601"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.576" endtime="20220524 00:47:44.601"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_promotionandiscount}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_promotionandiscount}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.601" endtime="20220524 00:47:44.622"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.601" endtime="20220524 00:47:44.622"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${txt_promotionandiscount}</arg>
+<arg>${promotions_and_discounts}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.622" level="INFO">Verifying element '//div[@class='jsx-2345204408 subtitle1 cart-discount__title']' contains exact text 'Promotions &amp; Discounts'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.622" endtime="20220524 00:47:44.639"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_promocode}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_promocode}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.639" endtime="20220524 00:47:44.658"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.639" endtime="20220524 00:47:44.658"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_applypromocode}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_applypromocode}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.659" endtime="20220524 00:47:44.678"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.659" endtime="20220524 00:47:44.678"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_summaryheader}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_summaryheader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.678" endtime="20220524 00:47:44.696"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.678" endtime="20220524 00:47:44.696"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${txt_summaryheader}</arg>
+<arg>${payment_summary}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.696" level="INFO">Verifying element '//div[@class='jsx-3478889746 subtitle1 cart-payment__title']' contains exact text 'Payment Summary'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.696" endtime="20220524 00:47:44.712"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_subtotal}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_subtotal}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.712" endtime="20220524 00:47:44.730"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.712" endtime="20220524 00:47:44.730"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${txt_subtotal}</arg>
+<arg>${subtotal}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.731" level="INFO">Verifying element '//span[@class='jsx-3478889746 caption']' contains exact text 'Sub - Total'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.730" endtime="20220524 00:47:44.746"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_subtotalprice}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_subtotalprice}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.746" endtime="20220524 00:47:44.763"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.746" endtime="20220524 00:47:44.763"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_total}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_total}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.764" endtime="20220524 00:47:44.780"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.763" endtime="20220524 00:47:44.780"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${txt_total}</arg>
+<arg>${total}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220524 00:47:44.782" level="INFO">Verifying element '//span[@class='jsx-3478889746 subtitle2']' contains exact text 'total'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.780" endtime="20220524 00:47:44.797"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${txt_totalprice}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${txt_totalprice}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.797" endtime="20220524 00:47:44.814"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.797" endtime="20220524 00:47:44.814"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_checkout}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_checkout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.814" endtime="20220524 00:47:44.834"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.814" endtime="20220524 00:47:44.834"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.055" endtime="20220524 00:47:44.834"/>
+</kw>
+<kw name="Click Checkout Button" library="common">
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>20s</arg>
+<arg>2s</arg>
+<arg>Wait Until Element Is Visible</arg>
+<arg>${btn_checkout}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${btn_checkout}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220524 00:47:44.836" endtime="20220524 00:47:44.849"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.836" endtime="20220524 00:47:44.850"/>
+</kw>
+<kw name="Click Button" library="Selenium2Library">
+<arg>${btn_checkout}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220524 00:47:44.850" level="INFO">Clicking button '//button[@data-cy='cart__checkout']'.</msg>
+<status status="PASS" starttime="20220524 00:47:44.850" endtime="20220524 00:47:45.094"/>
+</kw>
+<status status="PASS" starttime="20220524 00:47:44.835" endtime="20220524 00:47:45.094"/>
+</kw>
+<kw name="Close All Browsers" library="Selenium2Library">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220524 00:47:45.094" endtime="20220524 00:47:47.654"/>
+</kw>
+<tag>CASE006</tag>
+<status status="PASS" starttime="20220524 00:47:24.968" endtime="20220524 00:47:47.655"/>
+</test>
+<status status="PASS" starttime="20220524 00:45:12.959" endtime="20220524 00:47:47.657"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CASE001</stat>
+<stat pass="1" fail="0" skip="0">CASE002</stat>
+<stat pass="1" fail="0" skip="0">CASE003</stat>
+<stat pass="1" fail="0" skip="0">CASE004</stat>
+<stat pass="1" fail="0" skip="0">CASE005</stat>
+<stat pass="1" fail="0" skip="0">CASE006</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="Testcase">Testcase</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
